@@ -3,6 +3,7 @@ package cn.rayest.util;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 
+import java.util.Date;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
@@ -18,7 +19,12 @@ public class JsonUtil {
         while (resultSet.next()) {
             JSONObject jsonObject = new JSONObject();
             for (int i = 1; i <= columnNumber; i++) {
-                jsonObject.put(resultSetMetaData.getColumnName(i), resultSet.getObject(i));
+                Object object = resultSet.getObject(i);
+                if (object instanceof Date){
+                    jsonObject.put(resultSetMetaData.getColumnName(i), DateUtil.formatDate((Date) object, "yyyy-MM-dd"));
+                }else {
+                    jsonObject.put(resultSetMetaData.getColumnName(i), resultSet.getObject(i));
+                }
             }
             jsonArray.add(jsonObject);
         }

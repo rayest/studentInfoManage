@@ -5,7 +5,6 @@
     <%
         // 权限验证
         if (session.getAttribute("currentUser") == null) {
-            System.out.println("滚回");
             response.sendRedirect("index.jsp");
             return;
         }

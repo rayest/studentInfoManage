@@ -25,5 +25,15 @@
         <url-pattern>/gradeList</url-pattern>
     </servlet-mapping>
 
+    <!-- gradeDeleteServlet -->
+    <servlet>
+        <servlet-name>gradeDeleteServlet</servlet-name>
+        <servlet-class>cn.rayest.web.GradeDeleteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>gradeDeleteServlet</servlet-name>
+        <url-pattern>/gradeDelete</url-pattern>
+    </servlet-mapping>
+
 </web-app>
         

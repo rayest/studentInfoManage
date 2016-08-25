@@ -35,5 +35,25 @@
         <url-pattern>/gradeDelete</url-pattern>
     </servlet-mapping>
 
+    <!-- gradeSaveServlet -->
+    <servlet>
+        <servlet-name>gradeSaveServlet</servlet-name>
+        <servlet-class>cn.rayest.web.GradeSaveServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>gradeSaveServlet</servlet-name>
+        <url-pattern>/gradeSave</url-pattern>
+    </servlet-mapping>
+
+    <!-- studentListServlet -->
+    <servlet>
+        <servlet-name>studentListServlet</servlet-name>
+        <servlet-class>cn.rayest.web.StudentListServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>studentListServlet</servlet-name>
+        <url-pattern>/studentList</url-pattern>
+    </servlet-mapping>
+
 </web-app>
         

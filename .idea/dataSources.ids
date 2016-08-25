@@ -1,38 +1,245 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
-  <data-source name="MySQL - db_studentInfo@localhost" uuid="1ccfd301-2549-46ff-8556-f526f26a7e26">
-    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  <data-source name="MySQL - db_studentInfo@localhost [2]" uuid="f67002a1-d493-4a3e-a55e-45e7c6e8ea0b">
+    <database-info product="MySQL" version="5.5.49" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
     <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
       <schema id="1" name="db_studentinfo"/>
-      <table id="2" parent="1" name="t_user"/>
-      <table id="3" parent="1" name="t_grade"/>
-      <column id="4" parent="2" name="id">
+      <table id="2" parent="1" name="t_grade"/>
+      <table id="3" parent="1" name="t_student"/>
+      <table id="4" parent="1" name="t_user"/>
+      <column id="5" parent="2" name="id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="5" parent="2" name="userName">
+      <column id="6" parent="2" name="gradeName">
         <data-type>varchar(20)</data-type>
       </column>
-      <column id="6" parent="2" name="password">
-        <data-type>varchar(20)</data-type>
+      <column id="7" parent="2" name="gradeDesc">
+        <data-type>varchar(200)</data-type>
       </column>
-      <key id="7" parent="2" name="PRIMARY">
+      <key id="8" parent="2" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <column id="8" parent="3" name="id">
+      <column id="9" parent="3" name="id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="9" parent="3" name="gradeName">
+      <column id="10" parent="3" name="stuNo">
         <data-type>varchar(20)</data-type>
       </column>
-      <column id="10" parent="3" name="gradeDesc">
+      <column id="11" parent="3" name="stuName">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="12" parent="3" name="sex">
+        <data-type>varchar(5)</data-type>
+      </column>
+      <column id="13" parent="3" name="birthday">
+        <data-type>date</data-type>
+      </column>
+      <column id="14" parent="3" name="gradeId">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="15" parent="3" name="email">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="16" parent="3" name="stuDesc">
+        <data-type>varchar(1000)</data-type>
+      </column>
+      <index id="17" parent="3" name="gradeId">
+        <columns>gradeId</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="18" parent="3" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="19" parent="3" name="t_student_ibfk_1">
+        <columns>gradeId</columns>
+        <ref-key>~.t_grade.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="20" parent="4" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="21" parent="4" name="userName">
         <data-type>varchar(20)</data-type>
       </column>
-      <key id="11" parent="3" name="PRIMARY">
+      <column id="22" parent="4" name="password">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <key id="23" parent="4" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+  <data-source name="MySQL - db_studentInfo@localhost [3]" uuid="82e8f759-aff0-427c-932a-dcf67e30ff49">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
+      <schema id="1" name="db_studentinfo"/>
+      <table id="2" parent="1" name="t_grade"/>
+      <table id="3" parent="1" name="t_student"/>
+      <table id="4" parent="1" name="t_user"/>
+      <column id="5" parent="2" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="6" parent="2" name="gradeName">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="7" parent="2" name="gradeDesc">
+        <data-type>varchar(200)</data-type>
+      </column>
+      <key id="8" parent="2" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="9" parent="3" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="10" parent="3" name="stuNo">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="11" parent="3" name="stuName">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="12" parent="3" name="sex">
+        <data-type>varchar(5)</data-type>
+      </column>
+      <column id="13" parent="3" name="birthday">
+        <data-type>date</data-type>
+      </column>
+      <column id="14" parent="3" name="gradeId">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="15" parent="3" name="email">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="16" parent="3" name="stuDesc">
+        <data-type>varchar(1000)</data-type>
+      </column>
+      <index id="17" parent="3" name="gradeId">
+        <columns>gradeId</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="18" parent="3" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="19" parent="3" name="t_student_ibfk_1">
+        <columns>gradeId</columns>
+        <ref-key>~.t_grade.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="20" parent="4" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="21" parent="4" name="userName">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="22" parent="4" name="password">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <key id="23" parent="4" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+  <data-source name="MySQL - db_studentinfo@localhost" uuid="1ecf1c5d-39a9-48bd-aff9-5211da6e8a7a">
+    <database-info product="MySQL" version="5.5.49" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
+      <schema id="1" name="db_studentinfo"/>
+      <table id="2" parent="1" name="t_grade"/>
+      <table id="3" parent="1" name="t_student"/>
+      <table id="4" parent="1" name="t_user"/>
+      <column id="5" parent="2" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="6" parent="2" name="gradeName">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="7" parent="2" name="gradeDesc">
+        <data-type>varchar(200)</data-type>
+      </column>
+      <key id="8" parent="2" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="9" parent="3" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="10" parent="3" name="stuNo">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="11" parent="3" name="stuName">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="12" parent="3" name="sex">
+        <data-type>varchar(5)</data-type>
+      </column>
+      <column id="13" parent="3" name="birthday">
+        <data-type>date</data-type>
+      </column>
+      <column id="14" parent="3" name="gradeId">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="15" parent="3" name="email">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="16" parent="3" name="stuDesc">
+        <data-type>varchar(1000)</data-type>
+      </column>
+      <index id="17" parent="3" name="gradeId">
+        <columns>gradeId</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="18" parent="3" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="19" parent="3" name="t_student_ibfk_1">
+        <columns>gradeId</columns>
+        <ref-key>~.t_grade.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="20" parent="4" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="21" parent="4" name="userName">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="22" parent="4" name="password">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <key id="23" parent="4" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>

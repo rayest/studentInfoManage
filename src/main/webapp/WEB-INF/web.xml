@@ -55,5 +55,15 @@
         <url-pattern>/studentList</url-pattern>
     </servlet-mapping>
 
+    <!---->
+    <servlet>
+        <servlet-name>gradeComboListServlet</servlet-name>
+        <servlet-class>cn.rayest.web.GradeComboListServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>gradeComboListServlet</servlet-name>
+        <url-pattern>/gradeComboList</url-pattern>
+    </servlet-mapping>
+
 </web-app>
         

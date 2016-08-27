@@ -99,7 +99,7 @@
     <thead>
     <tr>
         <th field="checkBox" checkbox="true"></th>
-        <th field="id" width="50">编号</th>
+        <th field="id" width="50" >编号</th>
         <th field="gradeName" width="100">班级名称</th>
         <th field="gradeDesc" width="250">班级描述</th>
     </tr>
@@ -112,7 +112,7 @@
         <a href="javascript:deleteGrade()" class="easyui-linkbutton" iconCls="icon-remove" plain="true">删除</a>
     </div>
     <div>
-        班级名称：&nbsp;<input type="text" name="s_gradeName" id="s_gradeName">
+        班级名称：&nbsp;<input type="text" name="s_gradeName" id="s_gradeName" />
         <a href="javascript:searchGrade()" class="easyui-linkbutton" iconCls="icon-search" plain="true">搜索</a>
     </div>
 

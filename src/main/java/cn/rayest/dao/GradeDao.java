@@ -15,7 +15,7 @@ import java.sql.SQLException;
 public class GradeDao {
     public ResultSet gradeList(Connection connection, PageBean pageBean, Grade grade) throws SQLException {
         StringBuffer stringBuffer = new StringBuffer("select * from t_grade");
-        if (StringUtil.isNotEmpty(grade.getGradeName())) {
+        if ((grade != null) && StringUtil.isNotEmpty(grade.getGradeName())) {
             stringBuffer.append(" and gradeName like '%" + grade.getGradeName() + "%'");
         }
         if (pageBean != null) {

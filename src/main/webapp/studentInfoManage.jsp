@@ -18,14 +18,14 @@
     <thead>
     <tr>
         <th field="cb" checkbox="true"></th>
-        <th field="stuId" width="50">编号</th>
-        <th field="stuNo" width="100">学号</th>
-        <th field="stuName" width="100">姓名</th>
-        <th field="sex" width="100">性别</th>
-        <th field="birthday" width="100">出生日期</th>
-        <th field="gradeName" width="100">班级名称</th>
-        <th field="email" width="150">Email</th>
-        <th field="stuDesc" width="250">学生备注</th>
+        <th field="stuId" width="50" align="center">编号</th>
+        <th field="stuNo" width="100" align="center">学号</th>
+        <th field="stuName" width="100" align="center">姓名</th>
+        <th field="sex" width="100" align="center">性别</th>
+        <th field="birthday" width="100" align="center">出生日期</th>
+        <th field="gradeName" width="100" align="center">班级名称</th>
+        <th field="email" width="150" align="center">Email</th>
+        <th field="stuDesc" width="250" align="center">学生备注</th>
     </tr>
     </thead>
 </table>

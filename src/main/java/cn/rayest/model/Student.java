@@ -6,7 +6,7 @@ import java.util.Date;
  * Created by Rayest on 2016/8/25 0025.
  */
 public class Student {
-    private int id;
+    private int stuId;
     private String stuNo;
     private String stuName;
     private String sex;
@@ -24,12 +24,12 @@ public class Student {
         this.gradeName = gradeName;
     }
 
-    public int getId() {
-        return id;
+    public int getStuId() {
+        return stuId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setStuId(int stuId) {
+        this.stuId = stuId;
     }
 
     public String getStuNo() {

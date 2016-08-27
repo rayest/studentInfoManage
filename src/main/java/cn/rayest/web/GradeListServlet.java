@@ -22,6 +22,7 @@ import java.sql.Connection;
 public class GradeListServlet extends HttpServlet {
     DbUtil dbUtil = new DbUtil();
     GradeDao gradeDao = new GradeDao();
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         this.doPost(request, response);
@@ -32,7 +33,7 @@ public class GradeListServlet extends HttpServlet {
         String page = request.getParameter("page");
         String rows = request.getParameter("rows");
         String gradeName = request.getParameter("gradeName");
-        if (gradeName == null){
+        if (gradeName == null) {
             gradeName = "";
         }
         Grade grade = new Grade();
@@ -49,13 +50,12 @@ public class GradeListServlet extends HttpServlet {
             ResponseUtil.write(response, jsonObject);
         } catch (Exception e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             try {
                 dbUtil.closeConnection(connection);
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }
-
     }
 }

@@ -41,10 +41,28 @@ public class GradeDao {
         }
     }
 
-    // delete from tabelName where field in (1, 3, 5)
+
+    // delete from tableName where field in (1, 3, 5)
     public int gradeDelete(Connection connection, String deleteIds) throws SQLException {
         String sql = "DELETE FROM t_grade WHERE id IN (" + deleteIds + ")";
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
+        return preparedStatement.executeUpdate();
+    }
+
+    public int gradeAdd(Connection connection, Grade grade) throws SQLException {
+        String sql = "INSERT INTO t_grade VALUES (NULL, ?, ?);";
+        PreparedStatement preparedStatement = connection.prepareStatement(sql);
+        preparedStatement.setString(1, grade.getGradeName());
+        preparedStatement.setString(2, grade.getGradeDesc());
+        return preparedStatement.executeUpdate();
+    }
+
+    public int gradeModify(Connection connection, Grade grade) throws SQLException {
+        String sql = "UPDATE t_grade SET gradeName=?, gradeDesc=? WHERE id=?";
+        PreparedStatement preparedStatement = connection.prepareStatement(sql);
+        preparedStatement.setString(1, grade.getGradeName());
+        preparedStatement.setString(2, grade.getGradeDesc());
+        preparedStatement.setInt(3, grade.getId());
         return preparedStatement.executeUpdate();
     }
 }

@@ -18,7 +18,7 @@
     <thead>
     <tr>
         <th field="cb" checkbox="true"></th>
-        <th field="id" width="50">编号</th>
+        <th field="stuId" width="50">编号</th>
         <th field="stuNo" width="100">学号</th>
         <th field="stuName" width="100">姓名</th>
         <th field="sex" width="100">性别</th>

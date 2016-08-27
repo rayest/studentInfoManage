@@ -8,6 +8,14 @@ public class Grade {
     private String gradeName;
     private String gradeDesc;
 
+    public Grade() {
+    }
+
+    public Grade(String gradeName, String gradeDesc) {
+        this.gradeName = gradeName;
+        this.gradeDesc = gradeDesc;
+    }
+
     public int getId() {
         return id;
     }

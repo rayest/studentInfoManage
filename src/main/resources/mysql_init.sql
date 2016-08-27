@@ -46,3 +46,7 @@ CREATE TABLE t_student
 )
   ENGINE = InnoDb
   DEFAULT CHARSET = utf8;
+-- ------------------------------------
+-- -------- 修改表的结构 ---------------
+-- ------------------------------------
+ALTER TABLE t_student CHANGE id stuId INT(11) NOT NULL AUTO_INCREMENT;
